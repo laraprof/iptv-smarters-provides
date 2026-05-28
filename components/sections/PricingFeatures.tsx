@@ -48,7 +48,7 @@ export function PricingFeatures() {
                 {step.id}
               </div>
               <h3 className="text-slate-900 font-black text-lg mb-2">{step.title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{step.desc}</p>
+              <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>
@@ -58,7 +58,7 @@ export function PricingFeatures() {
           <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tighter mb-4">
             Stream smarter with IPTV Canada
           </h2>
-          <p className="text-slate-500 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg">
             Fast setup, EPG updates, Interac e-Transfer, and WhatsApp support when you need it.
           </p>
         </div>
@@ -95,7 +95,7 @@ export function PricingFeatures() {
                 <ShieldCheck className="text-green-500 mt-1" size={24} />
                 <div>
                   <h4 className="text-slate-900 font-black text-xl mb-2">Risk-free to try</h4>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
                     Test the service first with our free 24-hour trial. Eligible 
                     purchases are covered by our refund policy.
                   </p>
@@ -108,10 +108,10 @@ export function PricingFeatures() {
 
             <div className="bg-slate-50/50 border border-slate-200 border-dashed p-8 rounded-3xl">
               <div className="flex items-start gap-4">
-                <Info className="text-slate-400 mt-1" size={20} />
+                <Info className="text-slate-500 mt-1" size={20} />
                 <div>
                   <h4 className="text-slate-900 font-black text-base mb-2">Paying by Interac?</h4>
-                  <p className="text-slate-500 text-[13px] leading-relaxed">
+                  <p className="text-slate-600 text-[13px] leading-relaxed">
                     Follow the checkout instructions carefully and <span className="font-bold italic">don&apos;t mention IPTV in the memo</span>. 
                     We&apos;ll email your account details right after payment is confirmed.
                   </p>

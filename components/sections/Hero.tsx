@@ -73,8 +73,8 @@ export function Hero() {
           {/* Text Content Section */}
           <div className="order-1 lg:order-2 w-full">
             <div className="flex items-center gap-2 mb-6">
-              <Radio className="text-brand-blue" size={18} />
-              <span className="text-[11px] sm:text-[13px] font-black uppercase tracking-[2px] sm:tracking-[3px] text-brand-blue">IPTV CANADA</span>
+              <Radio className="text-brand-blue" size={18} aria-hidden="true" />
+              <span className="text-[11px] sm:text-[13px] font-black uppercase tracking-[2px] sm:tracking-[3px] text-brand-blue-dark">IPTV CANADA</span>
             </div>
             
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] mb-6 sm:mb-8 tracking-tighter">

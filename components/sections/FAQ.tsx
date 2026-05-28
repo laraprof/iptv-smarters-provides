@@ -16,8 +16,8 @@ export function FAQ() {
         {/* Header */}
         <div className="flex flex-col items-center mb-16 text-center">
           <div className="flex items-center gap-2 mb-4">
-            <HelpCircle className="text-brand-blue" size={18} />
-            <span className="text-[10px] sm:text-xs font-black uppercase tracking-[4px] text-brand-blue">Frequently Asked Questions</span>
+            <HelpCircle className="text-brand-blue" size={18} aria-hidden="true" />
+            <span className="text-[10px] sm:text-xs font-black uppercase tracking-[4px] text-brand-blue-dark">Frequently Asked Questions</span>
           </div>
           
           <h2 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tighter">

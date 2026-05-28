@@ -11,8 +11,8 @@ export function Pricing() {
     <section id="pricing" className="bg-[#f8fafc] py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="w-2 h-2 rotate-45 bg-brand-blue" />
-          <span className="text-xs font-black uppercase tracking-[4px] text-brand-blue">Pricing</span>
+          <div className="w-2 h-2 rotate-45 bg-brand-blue" aria-hidden="true" />
+          <span className="text-xs font-black uppercase tracking-[4px] text-brand-blue-dark">Pricing</span>
         </div>
         
         <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tighter">
