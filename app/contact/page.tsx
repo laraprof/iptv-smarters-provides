@@ -2,6 +2,7 @@ import { ContactHero } from "@/components/sections/ContactHero";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { ContactFAQ } from "@/components/sections/ContactFAQ";
 import type { Metadata } from "next";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
   title: "Contact Us | IPTV Canada Support",
@@ -31,7 +32,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(contactSchema) }}
       />
       <ContactHero />
       <ContactForm />

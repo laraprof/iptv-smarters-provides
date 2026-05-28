@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Clock, Tag, BookOpen } from "lucide-react";
 import { getAllBlogPosts, getFeaturedPost } from "@/constants/blog-posts";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
   title: "IPTV Blog — Guides, Setup Tutorials & News | IPTV Canada",
@@ -79,7 +80,7 @@ export default function BlogPage() {
       {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListingSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(blogListingSchema) }}
       />
 
       {/* Hero */}

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 import { getAllBlogPosts, getBlogPost } from "@/constants/blog-posts";
 import Image from "next/image";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const revalidate = 3600; // revalidate every hour
 
@@ -259,11 +260,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* JSON-LD Schemas */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(articleSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
       />
 
       {/* Header */}

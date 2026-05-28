@@ -4,6 +4,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { PricingFeatures } from "@/components/sections/PricingFeatures";
 import type { Metadata } from "next";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
   title: "IPTV Subscription Plans Canada — 25,000+ Channels",
@@ -34,7 +35,7 @@ export default function PricingPage() {
     <main className="bg-white min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(pricingSchema) }}
       />
       <PricingHero />
       <div className="relative -mt-20 z-20">

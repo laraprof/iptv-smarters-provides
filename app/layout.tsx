@@ -3,7 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { siteConfig } from "@/config/site";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,7 +54,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+            __html: safeJsonLd({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "IPTV Canada",
@@ -71,7 +73,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+            __html: safeJsonLd({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "IPTV Canada",
@@ -85,10 +87,11 @@ export default function RootLayout({
           }}
         />
         <Navbar />
-        <main className="pt-[116px]">
+        <main className="pt-[68px]">
           {children}
         </main>
         <Footer />
+        <WhatsAppButton />
         </body>
     </html>
   );

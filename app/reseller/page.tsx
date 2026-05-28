@@ -6,6 +6,7 @@ import { Reseller } from "@/components/sections/Reseller";
 import { FAQ } from "@/components/sections/FAQ";
 import { Testimonials } from "@/components/sections/Testimonials";
 import type { Metadata } from "next";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
   title: "IPTV Reseller Program Canada — Start Your Business Today",
@@ -31,7 +32,7 @@ export default function ResellerPage() {
     <main className="bg-white min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(resellerSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(resellerSchema) }}
       />
       <ResellerHero />
       <ResellerStart />

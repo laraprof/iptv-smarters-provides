@@ -11,6 +11,7 @@ import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import type { Metadata } from "next";
 import { faqData } from "@/constants/faq";
 import { siteConfig } from "@/config/site";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
   title: "IPTV Canada — #1 Best IPTV Subscription Service 2026",
@@ -57,8 +58,8 @@ export default function Home() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(pricingSchema) }} />
       <Hero />
       <Sports />
       <Devices />

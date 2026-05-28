@@ -15,14 +15,30 @@ interface PricingPlan {
 
 function CheckoutContent() {
   const searchParams = useSearchParams();
-  const planName = searchParams.get("plan") || "12 Month";
-  const devicesName = searchParams.get("devices") || "1 Device";
-  
+
+  // ── Whitelist URL params against known-good values ────────────────────────
+  // Prevents URL injection: /checkout?plan=<script>alert(1)</script>
+  const VALID_DEVICES = Object.keys(pricingData) as string[];
+  const VALID_PLANS   = Array.from(
+    new Set(Object.values(pricingData).flat().map((p) => p.duration))
+  );
+
+  const rawPlan    = searchParams.get("plan")    ?? "12 Month";
+  const rawDevices = searchParams.get("devices") ?? "1 Device";
+
+  const planName   = VALID_PLANS.includes(rawPlan)    ? rawPlan    : "12 Month";
+  const devicesName = VALID_DEVICES.includes(rawDevices) ? rawDevices : "1 Device";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     whatsapp: "",
   });
+
+  const [errors, setErrors] = useState<{ name?: string; email?: string; whatsapp?: string }>({});
+
+  // ── Sanitize plain text — strip tags ────────────────────────────────────
+  const sanitize = (v: string) => v.replace(/<[^>]*>/g, "").trim();
 
   // Find the selected plan details
   const pricingMap = pricingData as Record<string, PricingPlan[]>;
@@ -31,13 +47,26 @@ function CheckoutContent() {
 
   const handleWhatsAppRedirect = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const message = `Hello IPTV Canada! 🇨🇦\n\nI would like to subscribe to the following plan:\n\n- Plan: ${planName}\n- Connection: ${devicesName}\n- Price: $${selectedPlan.price} CA\n\nMy Details:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- WhatsApp: ${formData.whatsapp}\n\nPlease provide payment instructions.`;
-    
+
+    const name     = sanitize(formData.name);
+    const email    = sanitize(formData.email);
+    const whatsapp = sanitize(formData.whatsapp);
+
+    // ── Validate ────────────────────────────────────────────────────────────
+    const errs: typeof errors = {};
+    if (name.length < 2)                                              errs.name     = "Please enter your full name.";
+    if (!/^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,}$/.test(email))   errs.email    = "Please enter a valid email.";
+    if (whatsapp.length < 7)                                          errs.whatsapp = "Please enter a valid phone number.";
+
+    if (Object.keys(errs).length > 0) { setErrors(errs); return; }
+    setErrors({});
+
+    const message = `Hello IPTV Canada! 🇨🇦\n\nI would like to subscribe to the following plan:\n\n- Plan: ${planName}\n- Connection: ${devicesName}\n- Price: $${selectedPlan.price} CA\n\nMy Details:\n- Name: ${name}\n- Email: ${email}\n- WhatsApp: ${whatsapp}\n\nPlease provide payment instructions.`;
+
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, '')}?text=${encodedMessage}`;
-    
-    window.open(whatsappUrl, "_blank");
+    const whatsappUrl = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -63,10 +92,11 @@ function CheckoutContent() {
                   required
                   type="text" 
                   placeholder="John Doe"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 transition-all"
+                  className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:ring-4 transition-all ${errors.name ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                 />
+                {errors.name && <p className="text-xs text-red-500 font-semibold px-1 mt-1">{errors.name}</p>}
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-black text-brand-dark uppercase tracking-widest ml-1">WhatsApp Number</label>
@@ -74,10 +104,11 @@ function CheckoutContent() {
                   required
                   type="tel" 
                   placeholder="+1 (555) 000-0000"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 transition-all"
+                  className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:ring-4 transition-all ${errors.whatsapp ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
                   value={formData.whatsapp}
                   onChange={(e) => setFormData({...formData, whatsapp: e.target.value})}
                 />
+                {errors.whatsapp && <p className="text-xs text-red-500 font-semibold px-1 mt-1">{errors.whatsapp}</p>}
               </div>
             </div>
 
@@ -87,10 +118,11 @@ function CheckoutContent() {
                 required
                 type="email" 
                 placeholder="john@example.com"
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 transition-all"
+                className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:ring-4 transition-all ${errors.email ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
               />
+              {errors.email && <p className="text-xs text-red-500 font-semibold px-1 mt-1">{errors.email}</p>}
             </div>
 
             <div className="pt-4">

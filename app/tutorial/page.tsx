@@ -4,6 +4,7 @@ import { TutorialDeviceGrid } from "@/components/sections/TutorialDeviceGrid";
 import { Troubleshooting } from "@/components/sections/Troubleshooting";
 import { FAQ } from "@/components/sections/FAQ";
 import type { Metadata } from "next";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
   title: "IPTV Installation Guide — Setup Your Service Easily",
@@ -27,7 +28,7 @@ export default function TutorialPage() {
     <main className="bg-white min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(tutorialSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(tutorialSchema) }}
       />
       <TutorialHero />
       <TutorialSetup />
