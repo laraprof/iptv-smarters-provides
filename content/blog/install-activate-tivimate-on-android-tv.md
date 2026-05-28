@@ -71,4 +71,4 @@ Absolutely. Follow the same "Downloader" steps to get TiViMate on any Amazon Fir
 
 ---
 
-**Ready to upgrade your viewing experience? [Check our IPTV plans](https://iptvsmartproviders.com/pricing) that are fully compatible with TiViMate!**
+[View Our Premium IPTV Plans →](https://iptvsmartproviders.com/pricing)

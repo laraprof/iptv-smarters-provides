@@ -49,4 +49,4 @@ A great **Canada IPTV** provider makes sure your subscription includes a reliabl
 
 A smooth IPTV EPG transforms IPTV from just “channel lists” into a true premium TV experience. If you’re in Canada and want a reliable setup with accurate guide data, choosing a service that prioritizes EPG accuracy is the first step.
 
-**[Explore our pricing plans](https://iptvsmartproviders.com/pricing) or try a 24-hour trial to see our EPG in action!**
+[View Our Premium IPTV Plans →](https://iptvsmartproviders.com/pricing)

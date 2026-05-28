@@ -42,4 +42,4 @@ The choice between IPTV and cable depends on your needs.
 
 If you're ready to make the switch, check out our [installation guides](https://iptvsmartproviders.com/tutorial) or read our review of the [best IPTV players](https://iptvsmartproviders.com/blog/install-activate-tivimate-on-android-tv) to get started today.
 
-**[Compare our IPTV packages and start your 24-hour trial now!](https://iptvsmartproviders.com/pricing)**
+[View Our Premium IPTV Plans →](https://iptvsmartproviders.com/pricing)

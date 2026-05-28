@@ -114,7 +114,7 @@ IPTV is a legal technology, and **choosing a legitimate IPTV provider in Canada 
 
 Our service is built on a foundation of reliability, transparency, and respect for content rights — giving you peace of mind along with great TV.
 
-**[View Our Legal IPTV Canada Subscription Plans →](https://iptvsmartproviders.com/pricing)**
+[View Our Premium IPTV Plans →](https://iptvsmartproviders.com/pricing)
 
 ---
 

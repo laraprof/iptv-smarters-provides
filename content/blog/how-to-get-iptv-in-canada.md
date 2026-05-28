@@ -106,7 +106,7 @@ A good IPTV Canada subscription should include:
 
 Getting IPTV in Canada has never been easier. With the right provider, you can be up and running in under 10 minutes and start saving money on your TV bill immediately.
 
-**[Browse Our IPTV Subscription Plans →](https://iptvsmartproviders.com/pricing)**
+[View Our Premium IPTV Plans →](https://iptvsmartproviders.com/pricing)
 
 ---
 

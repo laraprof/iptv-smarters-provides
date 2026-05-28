@@ -125,7 +125,7 @@ Whether it's Game 7 of the Stanley Cup Playoffs or just a Tuesday night match, y
 
 With IPTV from Canada, you're always just a few taps away from home.
 
-**[Get Your Canadian IPTV Subscription →](https://iptvsmartproviders.com/pricing)**
+[View Our Premium IPTV Plans →](https://iptvsmartproviders.com/pricing)
 
 ---
 
