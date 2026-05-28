@@ -18,5 +18,7 @@ export const siteConfig = {
 
   verification: {
     google: "SMZClMu8s-8zwzfMQ1wok7x8ddHLyLhO4xVm_9XN8Fg",
+    bing: "C599E88324F1BF23B219798A653D00D7",
   },
 };
+

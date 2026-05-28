@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: siteConfig.verification.google,
+    other: {
+      "msvalidate.01": siteConfig.verification.bing,
+    },
   },
   openGraph: {
     title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
