@@ -78,14 +78,13 @@ export function Testimonials() {
                 <ChevronLeft size={20} />
               </button>
 
-              <div className="flex gap-2">
-                {testimonials.map((_, i) => (
-                  <button 
-                    key={i}
-                    onClick={() => setCurrentIndex(i)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === i ? 'bg-brand-blue w-6' : 'bg-slate-200'}`}
-                  />
-                ))}
+              <div className="flex gap-2 items-center justify-center min-w-[100px]">
+                <span className="text-sm font-black text-slate-800">
+                  {currentIndex + 1}
+                </span>
+                <span className="text-sm font-bold text-slate-400">
+                  / {testimonials.length}
+                </span>
               </div>
 
               <button 

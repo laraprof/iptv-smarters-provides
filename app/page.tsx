@@ -35,31 +35,101 @@ export default function Home() {
     })),
   };
 
-  const pricingSchema = {
+  const productSchemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "1 Month IPTV Canada Plan",
+      description: "1 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      offers: {
+        "@type": "Offer",
+        price: "19.00",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "3 Month IPTV Canada Plan",
+      description: "3 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      offers: {
+        "@type": "Offer",
+        price: "29.00",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "6 Month IPTV Canada Plan",
+      description: "6 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      offers: {
+        "@type": "Offer",
+        price: "49.00",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "12 Month IPTV Canada Plan",
+      description: "12 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      offers: {
+        "@type": "Offer",
+        price: "79.00",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      }
+    }
+  ];
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "IPTV Canada",
+    url: "https://iptvsmartproviders.com",
+    logo: "https://iptvsmartproviders.com/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      areaServed: "CA",
+    }
+  };
+
+  const aggregateRatingSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "IPTV Canada Subscription Plans",
-    image: `${siteConfig.url}/logo.png`,
-    description: "Premium IPTV subscription with 25,000+ live channels, 4K streaming, and 24/7 Canadian support.",
-    brand: { "@type": "Brand", name: "IPTV Canada" },
+    name: "IPTV Canada Service",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
-      reviewCount: "130", 
-    },
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "CAD",
-      lowPrice: "15.00",
-      highPrice: "120.00",
-      offerCount: "12",
-    },
+      reviewCount: "135",
+      bestRating: "5",
+    }
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "IPTV Canada",
+    url: "https://iptvsmartproviders.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://iptvsmartproviders.com/blog?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(pricingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productSchemas) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(aggregateRatingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteSchema) }} />
       <Hero />
       <Sports />
       <Devices />

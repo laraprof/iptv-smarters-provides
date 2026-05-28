@@ -13,30 +13,73 @@ export const metadata: Metadata = {
 };
 
 export default function PricingPage() {
-  const pricingSchema = {
+  const productSchemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "1 Month IPTV Canada Plan",
+      description: "1 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      offers: {
+        "@type": "Offer",
+        price: "19.00",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "3 Month IPTV Canada Plan",
+      description: "3 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      offers: {
+        "@type": "Offer",
+        price: "29.00",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "6 Month IPTV Canada Plan",
+      description: "6 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      offers: {
+        "@type": "Offer",
+        price: "49.00",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "12 Month IPTV Canada Plan",
+      description: "12 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      offers: {
+        "@type": "Offer",
+        price: "79.00",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      }
+    }
+  ];
+
+  const aggregateRatingSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "IPTV Subscription",
-    "description": "High-quality IPTV subscription with 25,000+ channels.",
-    "brand": {
-      "@type": "Brand",
-      "name": "IPTV Canada"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "CAD",
-      "lowPrice": "15.00",
-      "highPrice": "150.00",
-      "offerCount": "12"
+    name: "IPTV Canada Service",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "135",
+      bestRating: "5",
     }
   };
 
   return (
     <main className="bg-white min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJsonLd(pricingSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productSchemas) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(aggregateRatingSchema) }} />
       <PricingHero />
       <div className="relative -mt-20 z-20">
         <Pricing />

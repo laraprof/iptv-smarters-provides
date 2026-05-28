@@ -27,7 +27,7 @@ export function Hero() {
                 {/* Segment 2: Top Right */}
                 <div className="bg-slate-300 relative overflow-hidden">
                    <Image 
-                    src="https://images.unsplash.com/photo-1593784991095-a205039470b6?auto=format&fit=crop&q=80&w=400" 
+                    src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=400" 
                     alt="Close up of a 4K TV screen showing a movie"
                     fill
                     className="object-cover"
@@ -47,7 +47,7 @@ export function Hero() {
                 {/* Segment 4: Bottom Right */}
                 <div className="bg-slate-500 relative overflow-hidden">
                    <Image 
-                    src="https://images.unsplash.com/photo-1508919892463-013983ec5a19?auto=format&fit=crop&q=80&w=400" 
+                    src="https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?auto=format&fit=crop&q=80&w=400" 
                     alt="Home theater setup with high quality streaming"
                     fill
                     className="object-cover"

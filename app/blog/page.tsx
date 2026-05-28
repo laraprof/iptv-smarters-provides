@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "IPTV Blog — Guides, Setup Tutorials & News | IPTV Canada",
     description:
       "Expert IPTV guides, setup tutorials, app reviews, troubleshooting tips, and industry news for Canadian IPTV users.",
-    url: "https://iptvsmartproviders.comblog",
+    url: "https://iptvsmartproviders.com/blog",
     type: "website",
     siteName: "IPTV Canada",
     images: [

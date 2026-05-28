@@ -106,7 +106,7 @@ export function Pricing() {
                 {/* Action Button */}
                 <div className="p-8 pt-0">
                   <Link 
-                    href={`/checkout?plan=${plan.duration}&devices=${activeTab}`}
+                    href={`/checkout?plan=${encodeURIComponent(plan.duration)}&devices=${encodeURIComponent(activeTab)}`}
                     className="w-full bg-slate-800/50 hover:bg-brand-blue text-white font-black text-[11px] tracking-widest py-4.5 rounded-2xl flex items-center justify-center gap-2 transition-all duration-300 border border-white/5 hover:border-transparent group-hover:shadow-lg group-hover:shadow-brand-blue/30 active:scale-95"
                   >
                     GET STARTED <Plus size={14} strokeWidth={3} className="group-hover:rotate-90 transition-transform duration-300" />

@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.excerpt,
     },
     alternates: {
-      canonical: `https://iptvsmartproviders.comblog/${slug}`,
+      canonical: `https://iptvsmartproviders.com/blog/${slug}`,
     },
   };
 }
@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
-    url: `https://iptvsmartproviders.comblog/${slug}`,
+    url: `https://iptvsmartproviders.com/blog/${slug}`,
     author: {
       "@type": "Organization",
       name: "IPTV Canada",
@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://iptvsmartproviders.comblog/${slug}`,
+      "@id": `https://iptvsmartproviders.com/blog/${slug}`,
     },
     articleSection: post.category,
     wordCount: post.content.split(/\s+/).length,
