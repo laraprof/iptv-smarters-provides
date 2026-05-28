@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
     description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
-    url: "https://iptvsmartproviders.com/",
+    url: "https://iptvsmartproviders.com",
     siteName: "IPTV Canada",
     locale: "en_CA",
     type: "website",
@@ -56,8 +56,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "IPTV Canada",
-              "url": "https://iptvsmartproviders.com/",
-              "logo": "https://iptvsmartproviders.com//logo.png",
+              "url": "https://iptvsmartproviders.com",
+              "logo": "https://iptvsmartproviders.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": siteConfig.whatsapp,
@@ -75,10 +75,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "IPTV Canada",
-              "url": "https://iptvsmartproviders.com/",
+              "url": "https://iptvsmartproviders.com",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://iptvsmartproviders.com//blog?q={search_term_string}",
+                "target": "https://iptvsmartproviders.com/blog?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://iptvsmartproviders.com//blog/${slug}`,
+      url: `https://iptvsmartproviders.com/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
       siteName: "IPTV Canada",
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.excerpt,
     },
     alternates: {
-      canonical: `https://iptvsmartproviders.com/blog/${slug}`,
+      canonical: `https://iptvsmartproviders.comblog/${slug}`,
     },
   };
 }
@@ -69,20 +69,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
-    url: `https://iptvsmartproviders.com/blog/${slug}`,
+    url: `https://iptvsmartproviders.comblog/${slug}`,
     author: {
       "@type": "Organization",
       name: "IPTV Canada",
-      url: "https://iptvsmartproviders.com/",
+      url: "https://iptvsmartproviders.com",
     },
     publisher: {
       "@type": "Organization",
       name: "IPTV Canada",
-      url: "https://iptvsmartproviders.com/",
+      url: "https://iptvsmartproviders.com",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://iptvsmartproviders.com/blog/${slug}`,
+      "@id": `https://iptvsmartproviders.comblog/${slug}`,
     },
     articleSection: post.category,
     wordCount: post.content.split(/\s+/).length,
@@ -93,9 +93,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://iptvsmartproviders.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://iptvsmartproviders.com//blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://iptvsmartproviders.com//blog/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://iptvsmartproviders.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://iptvsmartproviders.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://iptvsmartproviders.com/blog/${slug}` },
     ],
   };
 

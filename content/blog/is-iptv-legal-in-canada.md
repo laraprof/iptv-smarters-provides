@@ -5,7 +5,7 @@ category: "Basics"
 excerpt: "Confused about the legality of IPTV in Canada? We break down what's legal, what's not, and how to choose a legitimate IPTV service with confidence."
 featured: true
 readTime: "14 min read"
-canonical: "https://iptvsmartproviders.com//blog/is-iptv-legal-in-canada"
+canonical: "https://iptvsmartproviders.com/blog/is-iptv-legal-in-canada"
 ---
 
 "Is IPTV legal in Canada?" is one of the most searched questions by Canadians considering a switch from cable. The short answer is: **yes, IPTV can be completely legal** — but it depends on the provider and the content being delivered.
@@ -32,7 +32,7 @@ IPTV is simply a technology — a method of delivering television over the inter
 - Have no verifiable company behind them
 - Often disappear suddenly, leaving subscribers without service
 
-## To learn more about the basic technology, read our [what is IPTV guide](https://iptvsmartproviders.com//blog/what-is-iptv-beginners-guide-canada).
+## To learn more about the basic technology, read our [what is IPTV guide](https://iptvsmartproviders.com/blog/what-is-iptv-beginners-guide-canada).
 
 ## What Canadian Law Says About IPTV
 
@@ -82,7 +82,7 @@ When something goes wrong, a legal provider has an actual support team. Illegal 
 
 ### 5. Peace of Mind
 
-## You're not contributing to content piracy, which ultimately harms Canadian broadcasters, producers, and content creators. For a broader look at the best options available, see our [complete guide to IPTV Canada 2026](https://iptvsmartproviders.com//blog/iptv-canada-complete-guide-internet-television-2026).
+## You're not contributing to content piracy, which ultimately harms Canadian broadcasters, producers, and content creators. For a broader look at the best options available, see our [complete guide to IPTV Canada 2026](https://iptvsmartproviders.com/blog/iptv-canada-complete-guide-internet-television-2026).
 
 ## What About IPTV Resellers?
 
@@ -114,8 +114,8 @@ IPTV is a legal technology, and **choosing a legitimate IPTV provider in Canada 
 
 Our service is built on a foundation of reliability, transparency, and respect for content rights — giving you peace of mind along with great TV.
 
-**[View Our Legal IPTV Canada Subscription Plans →](https://iptvsmartproviders.com//pricing)**
+**[View Our Legal IPTV Canada Subscription Plans →](https://iptvsmartproviders.com/pricing)**
 
 ---
 
-_Have more questions about our service? [Contact us anytime](https://iptvsmartproviders.com//contact) — our Canadian support team is happy to help._
+_Have more questions about our service? [Contact us anytime](https://iptvsmartproviders.com/contact) — our Canadian support team is happy to help._

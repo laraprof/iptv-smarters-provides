@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "IPTV Blog — Guides, Setup Tutorials & News | IPTV Canada",
     description:
       "Expert IPTV guides, setup tutorials, app reviews, troubleshooting tips, and industry news for Canadian IPTV users.",
-    url: "https://iptvsmartproviders.com/blog",
+    url: "https://iptvsmartproviders.comblog",
     type: "website",
     siteName: "IPTV Canada",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Expert IPTV guides, setup tutorials, app reviews and troubleshooting tips.",
   },
   alternates: {
-    canonical: "https://iptvsmartproviders.com//blog",
+    canonical: "https://iptvsmartproviders.com/blog",
   },
 };
 
@@ -55,18 +55,18 @@ export default function BlogPage() {
     name: "IPTV Canada Blog",
     description:
       "Expert guides, setup tutorials, app reviews, and troubleshooting tips for IPTV users in Canada.",
-    url: "https://iptvsmartproviders.com//blog",
+    url: "https://iptvsmartproviders.com/blog",
     publisher: {
       "@type": "Organization",
       name: "IPTV Canada",
-      url: "https://iptvsmartproviders.com/",
+      url: "https://iptvsmartproviders.com",
     },
     blogPost: allPosts.map((post) => ({
       "@type": "BlogPosting",
       headline: post.title,
       description: post.excerpt,
       datePublished: post.date,
-      url: `https://iptvsmartproviders.com//blog/${post.slug}`,
+      url: `https://iptvsmartproviders.com/blog/${post.slug}`,
       author: {
         "@type": "Organization",
         name: "IPTV Canada",

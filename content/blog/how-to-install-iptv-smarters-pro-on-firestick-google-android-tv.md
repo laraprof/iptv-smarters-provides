@@ -5,16 +5,16 @@ category: "Guides"
 excerpt: "This guide shows how to install IPTV Smarters Pro on Firestick, Android TV, PC, and iOS. IPTV Smarters is a popular live TV player."
 featured: false
 readTime: "10 min read"
-canonical: "https://iptvsmartproviders.com//blog/how-to-install-iptv-smarters-pro-on-firestick-google-android-tv"
+canonical: "https://iptvsmartproviders.com/blog/how-to-install-iptv-smarters-pro-on-firestick-google-android-tv"
 ---
 
-**NOTE:** We are using a [Fire TV Stick 4K Max](https://amazon.com) in the screenshots below. However, this exact method will also work on Google/Android TV Boxes as well as any variation of Firestick or Fire TV as well as [popular Smart TVs](https://iptvsmartproviders.com//apps).
+**NOTE:** We are using a [Fire TV Stick 4K Max](https://amazon.com) in the screenshots below. However, this exact method will also work on Google/Android TV Boxes as well as any variation of Firestick or Fire TV as well as [popular Smart TVs](https://iptvsmartproviders.com/apps).
 
 ## Step-by-Step Installation Guide
 
 ### 1. Install Downloader App
 
-You must first install the Downloader app on your device. If you haven't done this, refer to our [Downloader on Firestick Guide](https://iptvsmartproviders.com//tutorial).
+You must first install the Downloader app on your device. If you haven't done this, refer to our [Downloader on Firestick Guide](https://iptvsmartproviders.com/tutorial).
 
 ### 2. Launch Downloader
 

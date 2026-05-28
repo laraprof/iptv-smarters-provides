@@ -5,7 +5,7 @@ category: "Guides"
 excerpt: "Living abroad or traveling outside Canada? Learn how to access Canadian TV channels from anywhere using IPTV — no satellite dish required."
 featured: false
 readTime: "11 min read"
-canonical: "https://iptvsmartproviders.com//blog/iptv-from-canada"
+canonical: "https://iptvsmartproviders.com/blog/iptv-from-canada"
 ---
 
 Missing your favourite Canadian shows while living abroad? Whether you're an expat in Europe, a student studying overseas, or a Canadian snowbird in Florida — **IPTV from Canada** is the easiest way to stay connected to home.
@@ -125,8 +125,8 @@ Whether it's Game 7 of the Stanley Cup Playoffs or just a Tuesday night match, y
 
 With IPTV from Canada, you're always just a few taps away from home.
 
-**[Get Your Canadian IPTV Subscription →](https://iptvsmartproviders.com//pricing)**
+**[Get Your Canadian IPTV Subscription →](https://iptvsmartproviders.com/pricing)**
 
 ---
 
-_Questions about setting up abroad? [Contact our support team](https://iptvsmartproviders.com//contact) is available 24/7 and happy to help you get connected, no matter where you are._
+_Questions about setting up abroad? [Contact our support team](https://iptvsmartproviders.com/contact) is available 24/7 and happy to help you get connected, no matter where you are._
