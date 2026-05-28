@@ -16,6 +16,6 @@ export const siteConfig = {
   ],
 
   verification: {
-    google: "1Fg-cQNjg2eJcW2tKJyO1kf7HjviqIaUELPB8JW0He8",
+    google: "SMZClMu8s-8zwzfMQ1wok7x8ddHLyLhO4xVm_9XN8Fg",
   },
 };
