@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "IPTV Canada",
-  description: "Canada's #1 IPTV service — 25,000+ channels, 120,000+ movies, 4K quality.",
-  url: "https://iptv-canada-dun.vercel.app",
+  description: "Discover the best Canadian IPTV service for premium entertainment. Stream your favorite shows and movies in stunning 4K quality.",
+  url: "https://iptvsmartproviders.com/",
   trialUrl: "/checkout?plan=Trial&devices=1 Device",
-  supportEmail: "support@iptv-canada-dun.vercel.app",
-  whatsapp: "+1 345-431-6917",
+  supportEmail: "[EMAIL_ADDRESS]",
+  whatsapp: "+1 7579575093",
 
   nav: [
     { label: "Home",               href: "/" },

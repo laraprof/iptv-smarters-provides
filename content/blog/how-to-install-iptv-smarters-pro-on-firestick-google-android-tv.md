@@ -5,41 +5,51 @@ category: "Guides"
 excerpt: "This guide shows how to install IPTV Smarters Pro on Firestick, Android TV, PC, and iOS. IPTV Smarters is a popular live TV player."
 featured: false
 readTime: "10 min read"
-canonical: "https://iptv-canada-dun.vercel.app/blog/how-to-install-iptv-smarters-pro-on-firestick-google-android-tv"
+canonical: "https://iptvsmartproviders.com//blog/how-to-install-iptv-smarters-pro-on-firestick-google-android-tv"
 ---
 
-**NOTE:** We are using a [Fire TV Stick 4K Max](https://amazon.com) in the screenshots below. However, this exact method will also work on Google/Android TV Boxes as well as any variation of Firestick or Fire TV as well as [popular Smart TVs](https://iptv-canada-dun.vercel.app/apps).
+**NOTE:** We are using a [Fire TV Stick 4K Max](https://amazon.com) in the screenshots below. However, this exact method will also work on Google/Android TV Boxes as well as any variation of Firestick or Fire TV as well as [popular Smart TVs](https://iptvsmartproviders.com//apps).
 
 ## Step-by-Step Installation Guide
 
 ### 1. Install Downloader App
-You must first install the Downloader app on your device. If you haven't done this, refer to our [Downloader on Firestick Guide](https://iptv-canada-dun.vercel.app/tutorial).
+
+You must first install the Downloader app on your device. If you haven't done this, refer to our [Downloader on Firestick Guide](https://iptvsmartproviders.com//tutorial).
 
 ### 2. Launch Downloader
+
 Launch Downloader and place your cursor in the URL box and click the OK button on your remote to open the keyboard.
 
 ### 3. Enter Download Code
+
 Now, type **250931** and click Go. This is the official [code](https://troypoint.com) for the TROYPOINT Toolbox.
 
 ### 4. Open TROYPOINT Toolbox
+
 You are now presented with the home screen of the TROYPOINT Toolbox.
 
 ### 5. Find IPTV Smarters Pro
+
 Scroll down to find **IPTV Smarters Pro** and click **Download**.
 
 ### 6. Download & Install
+
 Wait for the app to download and click **Install**.
 
 ### 7. Confirm Installation
+
 Then click **Done**.
 
 ### 8. Delete Installation File
+
 You are then prompted to delete the installation file. This will free up space on your device. Click **Delete**.
 
 ### 9. Confirm Deletion
+
 Choose **Delete** again.
 
 ### 10. Open the App
+
 Installation is now complete. You can find IPTV Smarters Pro in your applications list.
 
 ---
@@ -53,6 +63,7 @@ After installing, you may launch the application for use. First, you are prompte
 Make sure to read the new announcement from Smarters Pro noting that they do not provide any playlists or content and click **Accept**.
 
 ### Login with Xtream Codes API
+
 Choose **Login with Xtream Codes API**. This is the recommended method for IPTV Canada subscribers.
 
 - Or if your IPTV Provider does not provide Xtream Codes setup, you can use an M3U URL and choose **Load Your Playlist or File URL**.
@@ -61,6 +72,7 @@ Choose **Login with Xtream Codes API**. This is the recommended method for IPTV 
 Because these M3U URLs are so long to type, we recommend using **Xtream Code** if possible.
 
 ### Enter Your Login Details
+
 - **Playlist Name**: Any Name (e.g., IPTV Canada)
 - **Username**: Provided in your activation email
 - **Password**: Provided in your activation email

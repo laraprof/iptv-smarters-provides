@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+    default: "IPTV Canada | 2026 Best IPTV Service With 24h Free Trial",
     template: "%s | IPTV Canada"
   },
-  description: "Experience the best IPTV Canada service with 25,000+ live channels, 4K sports (NHL/NFL), and 120,000+ VODs. Start your 24-hour free trial now!",
-  metadataBase: new URL("https://iptv-canada-dun.vercel.app"),
+  description: "Discover the best Canadian IPTV service for premium entertainment. Stream your favorite shows and movies in stunning 4K quality.",
+  metadataBase: new URL(siteConfig.url),
   alternates: {
     canonical: siteConfig.url,
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
     description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
-    url: "https://iptv-canada-dun.vercel.app",
+    url: "https://iptvsmartproviders.com/",
     siteName: "IPTV Canada",
     locale: "en_CA",
     type: "website",
@@ -56,8 +56,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "IPTV Canada",
-              "url": "https://iptv-canada-dun.vercel.app",
-              "logo": "https://iptv-canada-dun.vercel.app/logo.png",
+              "url": "https://iptvsmartproviders.com/",
+              "logo": "https://iptvsmartproviders.com//logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": siteConfig.whatsapp,
@@ -75,10 +75,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "IPTV Canada",
-              "url": "https://iptv-canada-dun.vercel.app",
+              "url": "https://iptvsmartproviders.com/",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://iptv-canada-dun.vercel.app/blog?q={search_term_string}",
+                "target": "https://iptvsmartproviders.com//blog?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

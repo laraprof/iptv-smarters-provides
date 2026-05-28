@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/checkout", "/api/"],
     },
-    sitemap: "https://iptv-canada-dun.vercel.app/sitemap.xml",
+    sitemap: "https://iptvsmartproviders.com//sitemap.xml",
   };
 }

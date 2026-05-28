@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllBlogPosts } from "@/constants/blog-posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://iptv-canada-dun.vercel.app";
+  const baseUrl = "https://iptvsmartproviders.com/";
 
   // Static routes
   const staticRoutes = [
