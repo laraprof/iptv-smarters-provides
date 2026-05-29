@@ -21,7 +21,7 @@ export default function ContactPage() {
       "name": "IPTV Canada",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "support@iptv-canada-dun.vercel.app",
+        "email": "info@liveiptvstream.com",
         "contactType": "customer service",
         "availableLanguage": "English"
       }

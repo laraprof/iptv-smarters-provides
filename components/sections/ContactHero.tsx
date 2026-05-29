@@ -36,7 +36,7 @@ export function ContactHero() {
               <Mail size={24} />
             </div>
             <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-2">Email Us</h3>
-            <p className="text-slate-400 text-xs font-semibold">support@iptv-canada-dun.vercel.app</p>
+            <p className="text-slate-400 text-xs font-semibold">info@liveiptvstream.com</p>
           </div>
 
           <div className="bg-white/5 border border-white/10 p-6 rounded-2xl flex flex-col items-center group hover:bg-white/10 transition-colors">
