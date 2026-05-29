@@ -92,7 +92,7 @@ function CheckoutContent() {
                   required
                   type="text" 
                   placeholder="John Doe"
-                  className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:ring-4 transition-all ${errors.name ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
+                  className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-4 transition-all ${errors.name ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                 />
@@ -104,7 +104,7 @@ function CheckoutContent() {
                   required
                   type="tel" 
                   placeholder="+1 (555) 000-0000"
-                  className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:ring-4 transition-all ${errors.whatsapp ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
+                  className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-4 transition-all ${errors.whatsapp ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
                   value={formData.whatsapp}
                   onChange={(e) => setFormData({...formData, whatsapp: e.target.value})}
                 />
@@ -118,7 +118,7 @@ function CheckoutContent() {
                 required
                 type="email" 
                 placeholder="john@example.com"
-                className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:ring-4 transition-all ${errors.email ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
+                className={`w-full bg-slate-50 border rounded-2xl px-6 py-4 text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-4 transition-all ${errors.email ? "border-red-400 focus:border-red-400 focus:ring-red-400/10" : "border-slate-200 focus:border-brand-blue focus:ring-brand-blue/5"}`}
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
               />

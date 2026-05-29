@@ -83,12 +83,16 @@ export function ContactForm() {
     setStatus("sending");
 
     try {
-      // ── WhatsApp redirect (no server endpoint) ───────────────────────────
-      // If you add an email API later, POST `sanitized` to /api/contact here.
-      const msg = encodeURIComponent(
-        `New Contact Form Submission\n\nName: ${sanitized.name}\nEmail: ${sanitized.email}\nSubject: ${sanitized.subject}\n\nMessage:\n${sanitized.message}`
-      );
-      window.open(`https://wa.me/17579575093?text=${msg}`, "_blank", "noopener,noreferrer");
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(sanitized),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       setStatus("success");
     } catch {
       setStatus("error");

@@ -8,6 +8,7 @@ import { Sports } from "@/components/sections/Sports";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Reseller } from "@/components/sections/Reseller";
 import { ComparisonSection } from "@/components/sections/ComparisonSection";
+import { BlogPreview } from "@/components/sections/BlogPreview";
 import type { Metadata } from "next";
 import { faqData } from "@/constants/faq";
 import { siteConfig } from "@/config/site";
@@ -139,6 +140,7 @@ export default function Home() {
       <WhyChoose />
       <Testimonials />
       <Reseller />
+      <BlogPreview />
       <FAQ />
     </>
   );

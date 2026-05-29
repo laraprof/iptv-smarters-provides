@@ -44,10 +44,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
+export default async function BlogPage(props: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  const searchParams = await props.searchParams;
+  const pageStr = searchParams?.page;
+  const currentPage = typeof pageStr === "string" ? parseInt(pageStr, 10) : 1;
+  const postsPerPage = 6;
+
   const allPosts = getAllBlogPosts();
-  const featured = getFeaturedPost();
+  const featured = currentPage === 1 ? getFeaturedPost() : null;
   const otherPosts = allPosts.filter((p) => !p.featured);
+
+  const totalPages = Math.ceil(otherPosts.length / postsPerPage);
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const currentPosts = otherPosts.slice(startIndex, startIndex + postsPerPage);
 
   // BlogPosting schema for the listing page
   const blogListingSchema = {
@@ -160,7 +169,7 @@ export default function BlogPage() {
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {otherPosts.map((post) => (
+          {currentPosts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
@@ -208,6 +217,41 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center gap-6 mt-16">
+            {currentPage > 1 ? (
+              <Link
+                href={`/blog?page=${currentPage - 1}`}
+                className="px-6 py-3 bg-white border border-slate-200 text-brand-dark font-black text-xs uppercase tracking-widest rounded-full hover:bg-slate-50 transition-colors"
+              >
+                Previous
+              </Link>
+            ) : (
+              <span className="px-6 py-3 bg-slate-50 border border-slate-100 text-slate-300 font-black text-xs uppercase tracking-widest rounded-full cursor-not-allowed">
+                Previous
+              </span>
+            )}
+            
+            <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">
+              Page {currentPage} of {totalPages}
+            </span>
+
+            {currentPage < totalPages ? (
+              <Link
+                href={`/blog?page=${currentPage + 1}`}
+                className="px-6 py-3 bg-white border border-slate-200 text-brand-dark font-black text-xs uppercase tracking-widest rounded-full hover:bg-slate-50 transition-colors"
+              >
+                Next
+              </Link>
+            ) : (
+              <span className="px-6 py-3 bg-slate-50 border border-slate-100 text-slate-300 font-black text-xs uppercase tracking-widest rounded-full cursor-not-allowed">
+                Next
+              </span>
+            )}
+          </div>
+        )}
       </section>
     </main>
   );

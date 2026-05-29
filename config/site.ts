@@ -3,7 +3,7 @@ export const siteConfig = {
   description: "Discover the best Canadian IPTV service for premium entertainment. Stream your favorite shows and movies in stunning 4K quality.",
   url: "https://iptvsmartproviders.com",
   trialUrl: "/checkout?plan=Trial&devices=1 Device",
-  supportEmail: "[EMAIL_ADDRESS]",
+  supportEmail: "info@liveiptvstream.com",
   whatsapp: "+1 7579575093",
 
   nav: [
