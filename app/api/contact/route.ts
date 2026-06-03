@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { validateContactEmail } from "@/lib/email-validator";
 
 export async function POST(req: Request) {
   try {
@@ -8,6 +9,14 @@ export async function POST(req: Request) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Missing required fields." },
+        { status: 400 }
+      );
+    }
+
+    const emailValidation = validateContactEmail(email);
+    if (!emailValidation.valid) {
+      return NextResponse.json(
+        { error: emailValidation.reason, validationResult: emailValidation },
         { status: 400 }
       );
     }

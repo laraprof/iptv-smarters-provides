@@ -28,6 +28,39 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // ── 301 Redirects: keyword cannibalization + legacy URL fixes ─────────────
+  async redirects() {
+    return [
+      // Canonical blog post consolidation — all "best iptv canada" variants → pillar
+      {
+        source: "/blog/best-iptv-canada-guide",
+        destination: "/blog/best-iptv-canada",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-iptv-providers-2026",
+        destination: "/blog/best-iptv-canada",
+        permanent: true,
+      },
+      {
+        source: "/blog/finding-best-iptv-providers",
+        destination: "/blog/best-iptv-canada",
+        permanent: true,
+      },
+      {
+        source: "/blog/10-best-iptv-canada-providers-ranked-reviewed",
+        destination: "/blog/best-iptv-canada",
+        permanent: true,
+      },
+      // /apps → /iptv-apps (better keyword-targeted slug)
+      {
+        source: "/apps",
+        destination: "/iptv-apps",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

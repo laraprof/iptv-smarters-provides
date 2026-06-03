@@ -90,6 +90,12 @@ export function ContactForm() {
       });
 
       if (!response.ok) {
+        const errorData = await response.json().catch(() => null);
+        if (errorData?.validationResult && !errorData.validationResult.valid) {
+          setErrors({ email: errorData.error || "Email validation failed." });
+          setStatus("idle");
+          return;
+        }
         throw new Error("Failed to send message");
       }
 

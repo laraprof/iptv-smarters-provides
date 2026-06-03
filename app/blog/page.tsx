@@ -5,9 +5,12 @@ import { getAllBlogPosts, getFeaturedPost } from "@/constants/blog-posts";
 import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
-  title: "IPTV Blog — Guides, Setup Tutorials & News | IPTV Canada",
+  // NOTE: The layout template appends "| IPTV Canada" automatically.
+  // Do NOT include it here or it will render twice.
+  title: "IPTV Blog — Guides, Setup Tutorials & News",
   description:
     "Expert IPTV guides, setup tutorials, app reviews, troubleshooting tips, and industry news. Learn how to get the most out of your IPTV subscription in Canada.",
+  robots: { index: true, follow: true },
   keywords: [
     "IPTV blog",
     "IPTV Canada guide",

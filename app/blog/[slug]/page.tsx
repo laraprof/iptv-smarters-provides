@@ -5,6 +5,8 @@ import { ArrowLeft, Clock, Tag } from "lucide-react";
 import { getAllBlogPosts, getBlogPost } from "@/constants/blog-posts";
 import Image from "next/image";
 import { safeJsonLd } from "@/lib/safe-json-ld";
+import { AuthorBio } from "@/components/shared/AuthorBio";
+import { BlogCta } from "@/components/shared/BlogCta";
 
 export const revalidate = 3600; // revalidate every hour
 
@@ -17,9 +19,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getBlogPost(slug);
   if (!post) return {};
 
+  // Dynamic OG image generated per-post via /og route
+  const ogImageUrl = `https://iptvsmartproviders.com/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`;
+
   return {
-    title: `${post.title} | IPTV Canada Blog`,
+    // Layout template appends "| IPTV Canada" — page title should NOT include it
+    title: post.title,
     description: post.excerpt,
+    robots: { index: true, follow: true },
     keywords: [
       post.category.toLowerCase(),
       "IPTV Canada",
@@ -33,10 +40,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.date,
       siteName: "IPTV Canada",
-      authors: ["IPTV Canada"],
+      authors: ["Alex Martin"],
       images: [
         {
-          url: "/images/blog-og.png",
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -47,6 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      images: [ogImageUrl],
     },
     alternates: {
       canonical: `https://iptvsmartproviders.com/blog/${slug}`,
@@ -62,24 +70,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  // Article JSON-LD schema
+  // BlogPosting JSON-LD schema — named human author for E-E-A-T
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
     url: `https://iptvsmartproviders.com/blog/${slug}`,
+    image: `https://iptvsmartproviders.com/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`,
     author: {
-      "@type": "Organization",
-      name: "IPTV Canada",
-      url: "https://iptvsmartproviders.com",
+      "@type": "Person",
+      name: "Alex Martin",
+      jobTitle: "IPTV Specialist",
+      url: "https://iptvsmartproviders.com/about",
     },
     publisher: {
       "@type": "Organization",
       name: "IPTV Canada",
       url: "https://iptvsmartproviders.com",
+      logo: { "@type": "ImageObject", url: "https://iptvsmartproviders.com/images/logo.png" },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -87,6 +98,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
     articleSection: post.category,
     wordCount: post.content.split(/\s+/).length,
+    inLanguage: "en-CA",
   };
 
   // BreadcrumbList schema
@@ -314,9 +326,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </header>
 
-      {/* Article Content */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="prose-custom">{renderContent(post.content)}</div>
+        {/* BlogCta — internal linking to /pricing and /free-trial */}
+        <BlogCta headline="Ready to Try IPTV Canada?" />
+
+        {/* Author Bio — E-E-A-T signal */}
+        <AuthorBio />
 
         {/* Internal Links: Related Articles */}
         {relatedPosts.length > 0 && (
@@ -340,34 +354,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           </nav>
         )}
-
-        {/* CTA */}
-        <div className="mt-12 pt-8 border-t border-slate-100">
-          <div className="bg-gradient-to-br from-brand-dark to-slate-900 rounded-3xl p-8 sm:p-12 text-center">
-            <h2 className="text-2xl font-black text-white tracking-tighter mb-4">
-              Ready to Try IPTV Canada?
-            </h2>
-            <p className="text-slate-400 text-sm mb-8 max-w-lg mx-auto">
-              Get access to 25,000+ channels with our free trial. No commitment
-              required.
-            </p>
-            <div className="flex items-center justify-center gap-4 flex-wrap">
-              <Link
-                href="/pricing"
-                className="bg-brand-blue hover:bg-blue-700 text-white font-black px-8 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all shadow-lg shadow-brand-blue/20"
-              >
-                View Plans
-              </Link>
-              <Link
-                href="/blog"
-                className="bg-white/10 hover:bg-white/20 text-white font-black px-8 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all border border-white/10"
-              >
-                More Articles
-              </Link>
-            </div>
-          </div>
-        </div>
-      </article>
     </main>
   );
 }
