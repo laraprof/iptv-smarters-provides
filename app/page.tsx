@@ -15,10 +15,30 @@ import { siteConfig } from "@/config/site";
 import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
-  title: "IPTV Canada — #1 Best IPTV Subscription Service 2026",
-  description: "Experience premium IPTV in Canada with 25,000+ live channels, 120,000+ VODs, and 4K quality. Fast activation, local support, and no contracts.",
+  title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+  description: "Canada's most reliable IPTV service. 25,000+ live channels, 120,000+ VODs, 4K streaming, 24/7 Canadian support.",
   alternates: {
     canonical: siteConfig.url,
+  },
+  openGraph: {
+    title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+    description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
+    url: "https://iptvsmartproviders.com",
+    siteName: "IPTV Canada",
+    locale: "en_CA",
+    type: "website",
+    images: [{
+      url: "https://iptvsmartproviders.com/og?title=IPTV%20Canada%20%E2%80%94%20%231%20Premium%20IPTV%20Subscription%20in%20Canada%202026",
+      width: 1200,
+      height: 630,
+      alt: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+    description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
+    images: ["https://iptvsmartproviders.com/og?title=IPTV%20Canada%20%E2%80%94%20%231%20Premium%20IPTV%20Subscription%20in%20Canada%202026"],
   },
 };
 
