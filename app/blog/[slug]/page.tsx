@@ -326,6 +326,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </header>
 
+      {/* Article Content */}
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mb-16">
+          {renderContent(post.content)}
+        </div>
+
         {/* BlogCta — internal linking to /pricing and /free-trial */}
         <BlogCta headline="Ready to Try IPTV Canada?" />
 
@@ -343,17 +349,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <Link
                   key={rp.slug}
                   href={`/blog/${rp.slug}`}
-                  className="bg-slate-50 border border-slate-100 rounded-xl p-5 hover:shadow-md hover:border-slate-200 transition-all group"
+                  className="bg-slate-50 border border-slate-100 rounded-xl p-5 hover:shadow-md hover:border-slate-200 transition-all group flex flex-col h-full"
                 >
                   <span className="text-[10px] font-black uppercase tracking-widest text-brand-blue">{rp.category}</span>
-                  <h3 className="text-sm font-black text-brand-dark tracking-tight mt-2 leading-snug group-hover:text-brand-blue transition-colors">
+                  <h3 className="text-sm font-black text-brand-dark tracking-tight mt-2 mb-3 leading-snug group-hover:text-brand-blue transition-colors">
                     {rp.title}
                   </h3>
+                  <p className="text-xs text-slate-500 mt-auto line-clamp-2 leading-relaxed">
+                    {rp.excerpt}
+                  </p>
                 </Link>
               ))}
             </div>
           </nav>
         )}
+      </article>
     </main>
   );
 }
