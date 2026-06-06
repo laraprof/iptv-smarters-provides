@@ -1,4 +1,5 @@
 ---
+date: "2026-06-06"
 publishDate: 2026-01-17T00:00:00Z
 author: IPTV Smarters
 title: 10 Best IPTV Apps in 2026 - Complete Comparison & Review

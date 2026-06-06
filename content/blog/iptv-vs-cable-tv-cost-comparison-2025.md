@@ -1,4 +1,5 @@
 ---
+date: "2026-06-06"
 publishDate: 2026-01-15T00:00:00Z
 author: IPTV Smarters
 title: IPTV vs Cable TV - Complete Cost Comparison 2026 (Real Numbers)

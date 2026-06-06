@@ -1,4 +1,5 @@
 ---
+date: "2026-06-06"
 publishDate: 2026-01-18T00:00:00Z
 author: IPTV Smarters
 title: "IPTV Channel List 2026: 15,000+ Channels You Can Watch [Full List]"

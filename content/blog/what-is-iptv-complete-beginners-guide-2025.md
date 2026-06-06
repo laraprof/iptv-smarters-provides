@@ -1,4 +1,5 @@
 ---
+date: "2026-06-06"
 publishDate: 2026-01-16T00:00:00Z
 author: IPTV Smarters
 title: What is IPTV? Complete Beginner's Guide 2026 - Everything You Need to Know

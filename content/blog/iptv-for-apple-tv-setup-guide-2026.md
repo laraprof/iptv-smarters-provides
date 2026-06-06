@@ -1,4 +1,5 @@
 ---
+date: "2026-06-06"
 publishDate: 2026-03-16T00:00:00Z
 author: IPTV Smarters
 title: 'IPTV for Apple TV 2026: Complete Setup Guide (All Models)'
