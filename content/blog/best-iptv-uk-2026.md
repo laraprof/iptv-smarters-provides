@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-03-16T00:00:00Z
+date: "2026-03-16"
 author: IPTV Smarters
 title: "Best IPTV Service UK 2026: Top 5 Providers Tested & Ranked"
 excerpt: "Find the best IPTV service for UK viewers in 2026. We tested 8+ providers for BBC, Sky Sports, BT Sport, and reliability. Full comparison with pricing, setup guide, and free trial info."

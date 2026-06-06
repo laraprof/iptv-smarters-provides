@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2023-08-09T00:00:00Z
+date: "2023-08-09"
 author: IPTV Smarters
 title: How to Install and Watch IPTV on Roku
 excerpt: Learn how to easily install and watch IPTV on Roku with this step-by-step guide. Enhance your streaming experience with IPTV Smarters Pro on Roku.

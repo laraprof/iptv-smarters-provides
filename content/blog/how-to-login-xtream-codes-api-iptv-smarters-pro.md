@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2024-02-16T00:00:00Z
+date: "2024-02-16"
 author: IPTV Smarters
 title: How to Login Xtream Codes API on IPTV Smarters Pro
 excerpt: Learn how to easily login Xtream Codes API on IPTV Smarters Pro and access your IPTV services seamlessly. Follow this step-by-step guide for a smooth setup process.

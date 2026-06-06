@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2024-02-16T00:00:00Z
+date: "2024-02-16"
 author: IPTV Smarters
 title: Top 5 Tips for Optimizing Your IPTV Experience
 excerpt: Learn how to enhance your IPTV experience with these 5 expert tips. From improving streaming quality to maximizing channel selection, we've got you covered!

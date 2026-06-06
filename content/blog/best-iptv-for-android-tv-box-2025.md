@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-03-15T00:00:00Z
+date: "2026-03-15"
 author: IPTV Smarters
 title: "Best IPTV for Android TV Box 2026: Top 5 Tested & Ranked"
 excerpt: "Find the best IPTV for Android TV Box in 2026. We tested 10+ services on Nvidia Shield, Chromecast with Google TV, and budget Android boxes. Top 5 picks with setup guide and expert tips."

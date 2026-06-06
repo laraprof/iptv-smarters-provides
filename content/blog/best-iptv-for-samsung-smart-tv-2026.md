@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-03-16T00:00:00Z
+date: "2026-03-16"
 author: IPTV Smarters
 title: 'Best IPTV for Samsung Smart TV 2026: Top 5 Tested & Ranked'
 excerpt: 'Find the best IPTV for Samsung Smart TV in 2026. We tested 10+ services on Samsung Tizen OS, QLED, and Frame TVs. Top 5 picks with full setup guide and expert tips.'

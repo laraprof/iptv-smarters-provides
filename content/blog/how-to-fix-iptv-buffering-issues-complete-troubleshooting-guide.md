@@ -1,5 +1,5 @@
 ---
-publishDate: 2024-02-16T00:00:00Z
+date: "2024-02-16"
 author: IPTV Smarters
 title: How to Fix IPTV Buffering Issues - Complete Troubleshooting Guide 2024
 excerpt: Experiencing buffering with your IPTV service? Learn how to fix IPTV buffering issues with our complete troubleshooting guide. Solutions for slow streaming, constant buffering, and playback problems.

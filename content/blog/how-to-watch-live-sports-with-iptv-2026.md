@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-03-16T00:00:00Z
+date: "2026-03-16"
 author: IPTV Smarters
 title: 'How to Watch Live Sports with IPTV 2026: Complete Guide'
 excerpt: 'Watch NFL, Premier League, NBA, UFC, and F1 live with IPTV in 2026. Full guide to the best IPTV services for sports, setup instructions, and how to never miss a game again.'

@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2024-02-16T00:00:00Z
+date: "2024-02-16"
 author: IPTV Smarters
 title: IPTV for Firestick - Complete Setup Guide 2026
 excerpt: Learn how to install and set up IPTV on Amazon Fire TV Stick. Complete step-by-step guide for installing IPTV Smarters Pro on Firestick, including troubleshooting tips and optimization advice.

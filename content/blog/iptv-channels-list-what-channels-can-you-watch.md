@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-01-18T00:00:00Z
+date: "2026-01-18"
 author: IPTV Smarters
 title: "IPTV Channel List 2026: 15,000+ Channels You Can Watch [Full List]"
 excerpt: "Full IPTV channel list for 2026 — ESPN, HBO, Sky Sports, beIN + 15,000 more live channels from 150+ countries. See every channel included with your subscription. Updated monthly →"

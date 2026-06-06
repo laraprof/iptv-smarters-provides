@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-03-16T00:00:00Z
+date: "2026-03-16"
 author: IPTV Smarters
 title: 'IPTV for Apple TV 2026: Complete Setup Guide (All Models)'
 excerpt: 'Learn how to set up IPTV on Apple TV in 2026. Works on Apple TV 4K, Apple TV HD, and Apple TV 4th gen. Step-by-step guide with the best IPTV apps for tvOS and free trial info.'

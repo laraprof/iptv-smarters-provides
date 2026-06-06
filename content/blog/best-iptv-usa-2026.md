@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-03-16T00:00:00Z
+date: "2026-03-16"
 author: IPTV Smarters
 title: "Best IPTV Service USA 2026: Top 5 Providers Tested & Ranked"
 excerpt: "Looking for the best IPTV service in the USA for 2026? We tested 8+ providers for US channels, sports, and reliability. Full comparison with pricing, setup guide, and free trial info."

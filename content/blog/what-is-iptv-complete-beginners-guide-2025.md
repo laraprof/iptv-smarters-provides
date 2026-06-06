@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-01-16T00:00:00Z
+date: "2026-01-16"
 author: IPTV Smarters
 title: What is IPTV? Complete Beginner's Guide 2026 - Everything You Need to Know
 excerpt: New to IPTV? This complete beginner's guide explains everything about IPTV technology, how it works, legal aspects, setup process, and why millions are switching from cable TV. Easy to understand for everyone!

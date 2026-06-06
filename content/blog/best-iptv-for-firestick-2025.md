@@ -1,6 +1,6 @@
 ---
 date: "2026-06-06"
-publishDate: 2026-03-16T00:00:00Z
+date: "2026-03-16"
 author: IPTV Smarters
 title: "Best IPTV for Firestick 2026: Top 5 Services Tested & Ranked"
 excerpt: "Looking for the best IPTV for Firestick in 2026? We tested 8+ services over 30 days on every Firestick model. Here are the top 5 picks with setup guide, comparison table, and expert tips for USA cord-cutters."
