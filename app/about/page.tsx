@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
-  title: "About IPTV Canada | 15+ Years of Streaming Excellence",
+  title: "About IPTV Canada | 8+ Years of Streaming Excellence",
   description: "Learn more about IPTV Canada. For over 15 years, our team has been delivering premium 4K IPTV services with 24/7 local support across the nation.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
@@ -95,7 +95,7 @@ export default function AboutPage() {
             </div>
             <div className="space-y-4">
               <div className="bg-brand-blue p-8 rounded-[32px] shadow-xl text-center">
-                <h3 className="text-4xl font-black text-white mb-2">15+</h3>
+                <h3 className="text-4xl font-black text-white mb-2">8+</h3>
                 <p className="text-blue-100 text-xs font-bold uppercase tracking-widest">Years Experience</p>
               </div>
               <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-lg text-center transform -translate-y-8">

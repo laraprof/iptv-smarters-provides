@@ -59,7 +59,7 @@ export function Hero() {
               {/* Center Badge */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-24 h-24 xs:w-32 xs:h-32 sm:w-48 sm:h-48 rounded-full bg-brand-blue border-4 sm:border-[6px] border-white shadow-xl flex flex-col items-center justify-center text-white p-2 sm:p-4 text-center z-10 animate-pulse-slow">
-                  <span className="text-xl xs:text-3xl sm:text-5xl font-black leading-none">15+</span>
+                  <span className="text-xl xs:text-3xl sm:text-5xl font-black leading-none">8+</span>
                   <span className="text-[8px] xs:text-[10px] sm:text-sm font-bold uppercase tracking-wider mt-1">Years of Excellence</span>
                 </div>
               </div>
