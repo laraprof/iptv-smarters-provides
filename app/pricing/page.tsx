@@ -19,11 +19,20 @@ export default function PricingPage() {
       "@type": "Product",
       name: "1 Month IPTV Canada Plan",
       description: "1 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      image: "https://iptvsmartproviders.com/logo.png",
+      sku: "IPTV-1M",
+      brand: {
+        "@type": "Brand",
+        name: "IPTV Canada"
+      },
       offers: {
         "@type": "Offer",
+        url: "https://iptvsmartproviders.com/pricing",
         price: "19.00",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
+        priceValidUntil: "2027-12-31",
+        itemCondition: "https://schema.org/NewCondition"
       }
     },
     {
@@ -31,11 +40,20 @@ export default function PricingPage() {
       "@type": "Product",
       name: "3 Month IPTV Canada Plan",
       description: "3 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      image: "https://iptvsmartproviders.com/logo.png",
+      sku: "IPTV-3M",
+      brand: {
+        "@type": "Brand",
+        name: "IPTV Canada"
+      },
       offers: {
         "@type": "Offer",
+        url: "https://iptvsmartproviders.com/pricing",
         price: "29.00",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
+        priceValidUntil: "2027-12-31",
+        itemCondition: "https://schema.org/NewCondition"
       }
     },
     {
@@ -43,11 +61,20 @@ export default function PricingPage() {
       "@type": "Product",
       name: "6 Month IPTV Canada Plan",
       description: "6 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      image: "https://iptvsmartproviders.com/logo.png",
+      sku: "IPTV-6M",
+      brand: {
+        "@type": "Brand",
+        name: "IPTV Canada"
+      },
       offers: {
         "@type": "Offer",
+        url: "https://iptvsmartproviders.com/pricing",
         price: "49.00",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
+        priceValidUntil: "2027-12-31",
+        itemCondition: "https://schema.org/NewCondition"
       }
     },
     {
@@ -55,11 +82,20 @@ export default function PricingPage() {
       "@type": "Product",
       name: "12 Month IPTV Canada Plan",
       description: "12 Month IPTV subscription with 25,000+ channels and 4K quality.",
+      image: "https://iptvsmartproviders.com/logo.png",
+      sku: "IPTV-12M",
+      brand: {
+        "@type": "Brand",
+        name: "IPTV Canada"
+      },
       offers: {
         "@type": "Offer",
+        url: "https://iptvsmartproviders.com/pricing",
         price: "79.00",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
+        priceValidUntil: "2027-12-31",
+        itemCondition: "https://schema.org/NewCondition"
       }
     }
   ];
