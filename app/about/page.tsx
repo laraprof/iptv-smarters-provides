@@ -5,7 +5,7 @@ import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export const metadata: Metadata = {
   title: "About IPTV Canada | 8+ Years of Streaming Excellence",
-  description: "Learn more about IPTV Canada. For over 15 years, our team has been delivering premium 4K IPTV services with 24/7 local support across the nation.",
+  description: "Learn more about IPTV Canada. For over 8 years, our team has been delivering premium 4K IPTV services with 24/7 local support across the nation.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
@@ -51,7 +51,7 @@ export default function AboutPage() {
             Redefining Television in <span className="text-brand-blue">Canada</span>
           </h1>
           <p className="text-slate-500 text-base sm:text-lg leading-relaxed font-medium">
-            For over 15 years, IPTV Canada has been at the forefront of digital entertainment, providing reliable, high-quality streaming solutions to thousands of households coast to coast.
+            For over 8 years, IPTV Canada has been at the forefront of digital entertainment, providing reliable, high-quality streaming solutions to thousands of households coast to coast.
           </p>
         </div>
 

@@ -32,7 +32,7 @@ export function WhyChoose() {
         {/* Content Blocks */}
         <div className="space-y-10 text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl mx-auto font-medium">
           <p>
-            At IPTV Canada, we&apos;re recognized as the best IPTV in Canada, delivering premium streaming excellence for over 15 years. 
+            At IPTV Canada, we&apos;re recognized as the best IPTV in Canada, delivering premium streaming excellence for over 8 years. 
             Our IPTV service combines superior technology with unmatched reliability, featuring 99.9% guaranteed uptime 
             and zero-buffering streaming across all devices.
           </p>
