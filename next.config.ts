@@ -49,7 +49,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/10-best-iptv-canada-providers-ranked-reviewed",
-        destination: "/blog/best-iptv-canada",
+        destination: "/blog/10-best-iptv-canada-2026",
         permanent: true,
       },
       // /apps → /iptv-apps (better keyword-targeted slug)
