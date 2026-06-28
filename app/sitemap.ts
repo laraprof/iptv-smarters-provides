@@ -1,34 +1,43 @@
-import { MetadataRoute } from "next";
-import { getAllBlogPosts } from "@/constants/blog-posts";
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://iptvsmartproviders.com";
+  const baseUrl = 'https://iptvsmartproviders.com'
+  
+  const staticRoutes = [
+    { url: baseUrl, changeFrequency: 'weekly' as const, priority: 1.0 },
+    { url: `${baseUrl}/pricing`, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/free-trial`, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/tutorial`, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/blog`, changeFrequency: 'daily' as const, priority: 0.8 },
+    { url: `${baseUrl}/reseller`, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${baseUrl}/channels`, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${baseUrl}/apps`, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${baseUrl}/about`, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/contact`, changeFrequency: 'monthly' as const, priority: 0.5 },
+  ]
 
-  // High-priority static pages (priority 1.0 / 0.9)
-  const primaryRoutes = [
-    { url: `${baseUrl}`,                          priority: 1.0, changeFrequency: "weekly"  as const },
-    { url: `${baseUrl}/pricing`,                  priority: 0.95, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/free-trial`,               priority: 0.95, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/iptv-apps`,                priority: 0.9,  changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/iptv-firestick-canada`,    priority: 0.9,  changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/blog`,                     priority: 0.85, changeFrequency: "daily"   as const },
-    { url: `${baseUrl}/tutorial`,                 priority: 0.8,  changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/contact`,                  priority: 0.75, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/about`,                    priority: 0.75, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/reseller`,                 priority: 0.7,  changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/dmca`,                     priority: 0.3,  changeFrequency: "yearly"  as const },
-    { url: `${baseUrl}/privacy`,                  priority: 0.3,  changeFrequency: "yearly"  as const },
-    { url: `${baseUrl}/terms`,                    priority: 0.3,  changeFrequency: "yearly"  as const },
-  ].map((r) => ({ ...r, lastModified: new Date() }));
+  // Add blog posts dynamically — replace with your actual data source
+  const blogSlugs = [
+    'is-iptv-legal-in-canada',
+    'best-iptv-canada',
+    'how-to-get-iptv-in-canada',
+    'iptv-from-canada',
+    'iptv-canada-complete-guide-internet-television-2026',
+    'install-activate-tivimate-on-android-tv',
+    'iptv-epg-explained-2025-best-iptv-canada-services-tv-guide',
+    'what-is-iptv-beginners-guide-canada',
+    'iptv-vs-cable-difference-which-is-better-canadians',
+    '10-best-iptv-canada-providers-ranked-reviewed',
+    '10-best-iptv-canada-2026',
+    'free-iptv-trial-how-to-test-iptv-service-before-buying',
+    'how-to-watch-iptv-on-multiple-devices-guide',
+  ]
 
-  // Blog posts — dynamic, from content directory
-  const blogPosts = getAllBlogPosts();
-  const blogRoutes = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
+  const blogRoutes = blogSlugs.map(slug => ({
+    url: `${baseUrl}/blog/${slug}`,
+    changeFrequency: 'monthly' as const,
     priority: 0.7,
-  }));
+  }))
 
-  return [...primaryRoutes, ...blogRoutes];
+  return [...staticRoutes, ...blogRoutes]
 }

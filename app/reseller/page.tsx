@@ -8,10 +8,20 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import type { Metadata } from "next";
 import { safeJsonLd } from "@/lib/safe-json-ld";
 
+import { getBreadcrumbSchema } from "@/lib/schemas";
+
 export const metadata: Metadata = {
-  title: "IPTV Reseller Program Canada — Start Your Business Today",
+  title: "IPTV Reseller Program Canada — Start Your Business Today | IPTV Canada",
   description: "Join the #1 IPTV reseller program in Canada. Get a professional panel, 25,000+ channels, and high-profit margins with our stable credits system.",
   keywords: ["IPTV reseller Canada", "IPTV panel reseller", "start IPTV business", "IPTV credits buy", "best IPTV reseller panel"],
+  alternates: {
+    canonical: "https://iptvsmartproviders.com/reseller",
+  },
+  openGraph: {
+    title: "IPTV Reseller Program Canada — Start Your Business Today",
+    description: "Join the #1 IPTV reseller program in Canada. Get a professional panel, 25,000+ channels, and high-profit margins.",
+    url: "https://iptvsmartproviders.com/reseller",
+  }
 };
 
 export default function ResellerPage() {
@@ -28,12 +38,18 @@ export default function ResellerPage() {
     "areaServed": "Canada"
   };
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "https://iptvsmartproviders.com" },
+    { name: "Reseller", url: "https://iptvsmartproviders.com/reseller" }
+  ]);
+
   return (
     <main className="bg-white min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(resellerSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <ResellerHero />
       <ResellerStart />
       <ResellerDetails />

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CheckCircle2, Play, Shield, Zap, Star, HelpCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { safeJsonLd } from "@/lib/safe-json-ld";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Try IPTV Canada Free — 24h Trial, No Credit Card",
@@ -81,24 +82,12 @@ const trialFeatures = [
 ];
 
 export default function FreeTrialPage() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
-    })),
-  };
+  const faqSchema = getFAQSchema(faqs);
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-      { "@type": "ListItem", position: 2, name: "Free Trial", item: `${siteConfig.url}/free-trial` },
-    ],
-  };
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Free Trial", url: `${siteConfig.url}/free-trial` }
+  ]);
 
   return (
     <main className="min-h-screen bg-white">

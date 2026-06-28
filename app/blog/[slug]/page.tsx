@@ -5,6 +5,7 @@ import { ArrowLeft, Clock, Tag } from "lucide-react";
 import { getAllBlogPosts, getBlogPost } from "@/constants/blog-posts";
 import Image from "next/image";
 import { safeJsonLd } from "@/lib/safe-json-ld";
+import { getBlogPostSchema, getBreadcrumbSchema } from "@/lib/schemas";
 import { AuthorBio } from "@/components/shared/AuthorBio";
 import { BlogCta } from "@/components/shared/BlogCta";
 
@@ -71,46 +72,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   // BlogPosting JSON-LD schema — named human author for E-E-A-T
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
+  const articleSchema = getBlogPostSchema({
+    title: post.title,
     description: post.excerpt,
+    url: `https://iptvsmartproviders.com/blog/${slug}`,
     datePublished: post.date,
     dateModified: post.date,
-    url: `https://iptvsmartproviders.com/blog/${slug}`,
-    image: `https://iptvsmartproviders.com/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`,
-    author: {
-      "@type": "Person",
-      name: "Alex Martin",
-      jobTitle: "IPTV Specialist",
-      url: "https://iptvsmartproviders.com/about",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "IPTV Canada",
-      url: "https://iptvsmartproviders.com",
-      logo: { "@type": "ImageObject", url: "https://iptvsmartproviders.com/images/logo.png" },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://iptvsmartproviders.com/blog/${slug}`,
-    },
-    articleSection: post.category,
-    wordCount: post.content.split(/\s+/).length,
-    inLanguage: "en-CA",
-  };
+    authorName: "Alex Martin",
+    image: `https://iptvsmartproviders.com/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`
+  });
 
   // BreadcrumbList schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://iptvsmartproviders.com" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://iptvsmartproviders.com/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://iptvsmartproviders.com/blog/${slug}` },
-    ],
-  };
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "https://iptvsmartproviders.com" },
+    { name: "Blog", url: "https://iptvsmartproviders.com/blog" },
+    { name: post.title, url: `https://iptvsmartproviders.com/blog/${slug}` }
+  ]);
 
   const renderContent = (content: string) => {
     const parseInlineMarkdown = (text: string) => {

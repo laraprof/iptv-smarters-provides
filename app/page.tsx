@@ -13,6 +13,7 @@ import type { Metadata } from "next";
 import { faqData } from "@/constants/faq";
 import { siteConfig } from "@/config/site";
 import { safeJsonLd } from "@/lib/safe-json-ld";
+import { getWebSiteSchema, getOrganizationSchema, getServiceSchema, getFAQSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
   openGraph: {
-    title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+    title: "IPTV Canada | 2026 Best IPTV Service With 24h Free Trial",
     description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
     url: "https://iptvsmartproviders.com",
     siteName: "IPTV Canada",
@@ -31,162 +32,24 @@ export const metadata: Metadata = {
       url: "https://iptvsmartproviders.com/og?title=IPTV%20Canada%20%E2%80%94%20%231%20Premium%20IPTV%20Subscription%20in%20Canada%202026",
       width: 1200,
       height: 630,
-      alt: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+      alt: "IPTV Canada | 2026  Best IPTV Service With 24h Free Trial",
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+    title: "IPTV Canada | 2026 Best IPTV Service With 24h Free Trial",
     description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
     images: ["https://iptvsmartproviders.com/og?title=IPTV%20Canada%20%E2%80%94%20%231%20Premium%20IPTV%20Subscription%20in%20Canada%202026"],
   },
 };
 
 export default function Home() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-
-  const productSchemas = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: "1 Month IPTV Canada Plan",
-      description: "1 Month IPTV subscription with 25,000+ channels and 4K quality.",
-      image: "https://iptvsmartproviders.com/logo.png",
-      sku: "IPTV-1M",
-      brand: {
-        "@type": "Brand",
-        name: "IPTV Canada"
-      },
-      offers: {
-        "@type": "Offer",
-        url: "https://iptvsmartproviders.com/pricing",
-        price: "19.00",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-        priceValidUntil: "2027-12-31",
-        itemCondition: "https://schema.org/NewCondition"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: "3 Month IPTV Canada Plan",
-      description: "3 Month IPTV subscription with 25,000+ channels and 4K quality.",
-      image: "https://iptvsmartproviders.com/logo.png",
-      sku: "IPTV-3M",
-      brand: {
-        "@type": "Brand",
-        name: "IPTV Canada"
-      },
-      offers: {
-        "@type": "Offer",
-        url: "https://iptvsmartproviders.com/pricing",
-        price: "29.00",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-        priceValidUntil: "2027-12-31",
-        itemCondition: "https://schema.org/NewCondition"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: "6 Month IPTV Canada Plan",
-      description: "6 Month IPTV subscription with 25,000+ channels and 4K quality.",
-      image: "https://iptvsmartproviders.com/logo.png",
-      sku: "IPTV-6M",
-      brand: {
-        "@type": "Brand",
-        name: "IPTV Canada"
-      },
-      offers: {
-        "@type": "Offer",
-        url: "https://iptvsmartproviders.com/pricing",
-        price: "49.00",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-        priceValidUntil: "2027-12-31",
-        itemCondition: "https://schema.org/NewCondition"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: "12 Month IPTV Canada Plan",
-      description: "12 Month IPTV subscription with 25,000+ channels and 4K quality.",
-      image: "https://iptvsmartproviders.com/logo.png",
-      sku: "IPTV-12M",
-      brand: {
-        "@type": "Brand",
-        name: "IPTV Canada"
-      },
-      offers: {
-        "@type": "Offer",
-        url: "https://iptvsmartproviders.com/pricing",
-        price: "79.00",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-        priceValidUntil: "2027-12-31",
-        itemCondition: "https://schema.org/NewCondition"
-      }
-    }
-  ];
-
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "IPTV Canada",
-    url: "https://iptvsmartproviders.com",
-    logo: "https://iptvsmartproviders.com/logo.png",
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      areaServed: "CA",
-    }
-  };
-
-  const aggregateRatingSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "IPTV Canada Service",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "135",
-      bestRating: "5",
-    }
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "IPTV Canada",
-    url: "https://iptvsmartproviders.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://iptvsmartproviders.com/blog?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productSchemas) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(aggregateRatingSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getWebSiteSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getOrganizationSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getServiceSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getFAQSchema(faqData)) }} />
       <Hero />
       <Sports />
       <Devices />

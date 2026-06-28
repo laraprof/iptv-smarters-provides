@@ -8,7 +8,7 @@ export function WhyChoose() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/fans-cheering.png"
-          alt="fans cheering"
+          alt="Excited Canadian sports fans celebrating a goal, streaming live in 4K via the best IPTV Canada provider"
           fill
           className="object-cover opacity-20 grayscale"
         />

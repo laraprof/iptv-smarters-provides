@@ -17,7 +17,7 @@ export function Hero() {
                 <div className="bg-slate-200 relative overflow-hidden">
                    <Image 
                     src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&q=80&w=400" 
-                    alt="Family watching TV in a modern living room"
+                    alt="Family watching the best IPTV Canada service on a modern 4K TV"
                     fill
                     priority
                     className="object-cover"
@@ -28,7 +28,7 @@ export function Hero() {
                 <div className="bg-slate-300 relative overflow-hidden">
                    <Image 
                     src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=400" 
-                    alt="Close up of a 4K TV screen showing a movie"
+                    alt="Close up of a 4K TV screen streaming high-quality IPTV Canada channels"
                     fill
                     className="object-cover"
                     sizes="(max-w-7xl) 25vw, 225px"
@@ -38,7 +38,7 @@ export function Hero() {
                 <div className="bg-slate-400 relative overflow-hidden">
                    <Image 
                     src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=400" 
-                    alt="Sports fan cheering at a live game on TV"
+                    alt="Canadian sports fan cheering at a live NHL game via premium IPTV subscription Canada"
                     fill
                     className="object-cover"
                     sizes="(max-w-7xl) 25vw, 225px"
@@ -48,7 +48,7 @@ export function Hero() {
                 <div className="bg-slate-500 relative overflow-hidden">
                    <Image 
                     src="https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?auto=format&fit=crop&q=80&w=400" 
-                    alt="Home theater setup with high quality streaming"
+                    alt="Home theater setup featuring the top-rated IPTV Canada 2026 provider"
                     fill
                     className="object-cover"
                     sizes="(max-w-7xl) 25vw, 225px"

@@ -58,7 +58,7 @@ export function Reseller() {
             <div className="relative z-10">
               <Image 
                 src="/images/reseller-handshake.png" 
-                alt="Reseller Handshake" 
+                alt="Start a profitable IPTV reseller business in Canada with our premium white-label IPTV provider program" 
                 width={700} 
                 height={700} 
                 className="w-full h-auto drop-shadow-[0_0_50px_rgba(59,130,246,0.2)]"

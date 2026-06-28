@@ -18,34 +18,60 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://iptvsmartproviders.com'),
   title: {
-    default: "IPTV Canada | 2026 Best IPTV Service With 24h Free Trial",
-    template: "%s | IPTV Canada"
+    default: 'IPTV Canada — #1 Premium IPTV Subscription in Canada 2026',
+    template: '%s | IPTV Canada'
   },
-  description: "Discover the best Canadian IPTV service for premium entertainment. Stream your favorite shows and movies in stunning 4K quality.",
-  metadataBase: new URL(siteConfig.url),
+  description: "Canada's most reliable IPTV service. 25,000+ live channels, 120,000+ VODs, 4K streaming, 24/7 Canadian support.",
+  keywords: ['IPTV Canada', 'best IPTV Canada', 'IPTV subscription Canada', 'Canadian IPTV', 'IPTV 4K Canada'],
+  authors: [{ name: 'IPTV Canada' }],
+  creator: 'IPTV Canada',
+  publisher: 'IPTV Canada',
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
-  },
-  alternates: {
-    canonical: siteConfig.url,
-  },
-  verification: {
-    google: siteConfig.verification.google,
-    other: {
-      "msvalidate.01": siteConfig.verification.bing,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   openGraph: {
-    title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
+    type: 'website',
+    locale: 'en_CA',
+    url: 'https://iptvsmartproviders.com',
+    siteName: 'IPTV Canada',
+    title: 'IPTV Canada | 2026 Best IPTV Service With 24h Free Trial',
     description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
-    url: "https://iptvsmartproviders.com",
-    siteName: "IPTV Canada",
-    locale: "en_CA",
-    type: "website",
+    images: [{
+      url: '/og?title=IPTV Canada | 2026 Best IPTV Service With 24h Free Trial',
+      width: 1200,
+      height: 630,
+      alt: 'IPTV Canada — Best IPTV Service 2026',
+    }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IPTV Canada | 2026 Best IPTV Service With 24h Free Trial',
+    description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
+    images: ['/og?title=IPTV Canada | 2026 Best IPTV Service With 24h Free Trial'],
+  },
+  alternates: {
+    canonical: 'https://iptvsmartproviders.com',
+    languages: {
+      'en-CA': 'https://iptvsmartproviders.com',
+      'en-US': 'https://iptvsmartproviders.com',
+    },
+  },
+  verification: {
+    google: 'SMZClMu8s-8zwzfMQ1wok7x8ddHLyLhO4xVm_9XN8Fg',
+    other: {
+      'msvalidate.01': 'C599E88324F1BF23B219798A653D00D7',
+    }
+  }
 };
 
 export default function RootLayout({

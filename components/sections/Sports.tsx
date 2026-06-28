@@ -71,7 +71,7 @@ export function Sports() {
             <div className="relative z-10 scale-110">
               <Image 
                 src="/images/sports-collage.png" 
-                alt="Sports Collage" 
+                alt="Live NHL, NBA, and international sports streaming available on the best IPTV Canada service" 
                 width={800} 
                 height={800} 
                 className="w-full h-auto drop-shadow-2xl"
