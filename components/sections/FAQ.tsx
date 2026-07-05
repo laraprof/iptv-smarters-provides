@@ -56,7 +56,8 @@ export function FAQ() {
                   }`}
                 >
                   <div className="px-6 pb-6 pt-2 text-slate-500 text-[13px] leading-relaxed border-t border-slate-50">
-                    {faq.answer}
+                    <p className="font-medium text-slate-700 mb-3">{faq.answer}</p>
+                    {faq.longAnswer && <p>{faq.longAnswer}</p>}
                   </div>
                 </div>
               </div>
@@ -94,7 +95,8 @@ export function FAQ() {
                     }`}
                   >
                     <div className="px-6 pb-6 pt-2 text-slate-500 text-[13px] leading-relaxed border-t border-slate-50">
-                      {faq.answer}
+                      <p className="font-medium text-slate-700 mb-3">{faq.answer}</p>
+                      {faq.longAnswer && <p>{faq.longAnswer}</p>}
                     </div>
                   </div>
                 </div>

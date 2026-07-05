@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import {  MessageCircle, Mail, MapPin, ShieldCheck, Zap } from "lucide-react";
+import { cities } from "@/constants/city-pages";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
       
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-6">
           
           {/* Column 1: Brand & Bio */}
           <div className="lg:col-span-4 flex flex-col items-start">
@@ -79,6 +80,7 @@ export function Footer() {
               {[
                 { label: "Contact Us", href: "/contact" },
                 { label: "Installation Guide", href: "/tutorial" },
+                { label: "Press & Media", href: "/press" },
                 { label: "DMCA Notice", href: "/dmca" },
                 { label: "Privacy Policy", href: "/privacy" },
                 { label: "Terms of Service", href: "/terms" },
@@ -96,17 +98,35 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Column 3.5: Cities We Serve */}
+          <div className="lg:col-span-2">
+            <h3 className="text-white font-black text-xs uppercase tracking-[3px] mb-8">Cities</h3>
+            <ul className="space-y-4">
+              {cities.slice(0, 5).map((city) => (
+                <li key={city.slug}>
+                  <Link 
+                    href={`/${city.slug}`} 
+                    className="text-slate-500 hover:text-brand-blue transition-colors font-semibold flex items-center gap-2 group"
+                  >
+                    <div className="w-1 h-1 rounded-full bg-slate-700 group-hover:bg-brand-blue transition-colors" />
+                    {city.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Column 4: Contact & Features */}
-          <div className="lg:col-span-4 flex flex-col gap-8">
+          <div className="lg:col-span-2 flex flex-col gap-8">
             <div className="bg-white/5 border border-white/10 p-6 rounded-3xl relative overflow-hidden group">
                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <ShieldCheck size={40} className="text-brand-blue" />
                </div>
                <h4 className="text-white font-black text-xs uppercase tracking-widest mb-4">Official Contact</h4>
                <div className="space-y-4">
-                  <a href={`mailto:${siteConfig.supportEmail}`} className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">
-                    <Mail size={16} className="text-brand-blue" />
-                    <span className="font-semibold">{siteConfig.supportEmail}</span>
+                  <a href={`mailto:${siteConfig.supportEmail}`} className="flex items-start gap-3 text-slate-400 hover:text-white transition-colors">
+                    <Mail size={16} className="text-brand-blue shrink-0 mt-0.5" />
+                    <span className="font-semibold text-sm break-all">{siteConfig.supportEmail}</span>
                   </a>
                   <div className="flex items-center gap-3 text-slate-400">
                     <Zap size={16} className="text-brand-blue" />

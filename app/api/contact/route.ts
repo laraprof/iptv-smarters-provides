@@ -22,18 +22,18 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: "liveiptvstream.com",
+      host: "smtp.iptvsmartproviders.com",
       port: 465,
       secure: true,
       auth: {
-        user: "info@liveiptvstream.com",
+        user: "support@iptvsmartproviders.com",
         pass: process.env.SMTP_PASSWORD, // Must be set in .env
       },
     });
 
     const mailOptions = {
-      from: `"IPTV Canada Contact" <info@liveiptvstream.com>`,
-      to: "info@liveiptvstream.com",
+      from: `"IPTV Canada Contact" <support@iptvsmartproviders.com>`,
+      to: "support@iptvsmartproviders.com",
       replyTo: email,
       subject: `New Contact Form Submission: ${subject || "General Inquiry"}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject || "General Inquiry"}\n\nMessage:\n${message}`,
@@ -92,7 +92,7 @@ export async function POST(req: Request) {
 
     // Send auto-reply to the customer
     const autoReplyOptions = {
-      from: `"IPTV Canada" <info@liveiptvstream.com>`,
+      from: `"IPTV Canada" <support@iptvsmartproviders.com>`,
       to: email,
       subject: `We received your message: ${subject || "General Inquiry"}`,
       text: `Hi ${name},\n\nThank you for reaching out to IPTV Canada! We have received your message and will get back to you as soon as possible.\n\nBest regards,\nIPTV Canada Team`,

@@ -58,6 +58,34 @@ const nextConfig: NextConfig = {
         destination: "/iptv-apps",
         permanent: true,
       },
+      // ── Legacy WordPress Migration Redirects ──────────────
+      // Redirect date-based blog URLs (e.g., /2024/01/post-name/ to /blog/post-name)
+      {
+        source: "/:year(\\d{4})/:month(\\d{2})/:slug",
+        destination: "/blog/:slug",
+        permanent: true,
+      },
+      {
+        source: "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug",
+        destination: "/blog/:slug",
+        permanent: true,
+      },
+      // Redirect old category and tag archives to main blog page
+      {
+        source: "/category/:path*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/tag/:path*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/author/:path*",
+        destination: "/about",
+        permanent: true,
+      },
     ];
   },
 

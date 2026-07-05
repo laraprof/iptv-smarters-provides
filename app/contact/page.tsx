@@ -21,7 +21,7 @@ export default function ContactPage() {
       "name": "IPTV Canada",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "info@liveiptvstream.com",
+        "email": "support@iptvsmartproviders.com",
         "contactType": "customer service",
         "availableLanguage": "English"
       }

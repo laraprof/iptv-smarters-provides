@@ -90,6 +90,39 @@ export function getServiceSchema() {
   }
 }
 
+// 3.5 Local Service schema — for city pages
+export function getLocalServiceSchema(city: string, provinceCode: string, url: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `IPTV Service in ${city}, ${provinceCode}`,
+    "provider": {
+      "@type": "Organization",
+      "name": "IPTV Canada",
+      "url": "https://iptvsmartproviders.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": city,
+      "containedInPlace": {
+        "@type": "State",
+        "name": provinceCode
+      }
+    },
+    "url": url,
+    "description": `Premium IPTV subscription with 25,000+ live channels, 120,000+ VOD, 4K quality for viewers in ${city}, ${provinceCode}.`,
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "12 Month Plan",
+        "price": "79",
+        "priceCurrency": "CAD",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+}
+
 // 4. FAQPage schema — homepage FAQ section
 export function getFAQSchema(faqs: { question: string; answer: string }[]) {
   return {

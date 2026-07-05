@@ -77,7 +77,7 @@ export default function PrivacyPage() {
             
             <div className="bg-brand-dark rounded-2xl p-8 text-white inline-block">
               <p className="font-black text-brand-blue uppercase tracking-widest text-[10px] mb-2">Support Email</p>
-              <p className="text-xl font-bold">info@liveiptvstream.com</p>
+              <p className="text-xl font-bold">support@iptvsmartproviders.com</p>
             </div>
             
             <p className="mt-12 text-xs text-slate-400 font-bold uppercase tracking-widest">

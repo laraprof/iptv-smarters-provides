@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next'
+import { cities } from '@/constants/city-pages'
+import { getAllBlogPosts } from '@/constants/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://iptvsmartproviders.com'
@@ -14,24 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/apps`, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${baseUrl}/about`, changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${baseUrl}/contact`, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/press`, changeFrequency: 'monthly' as const, priority: 0.5 },
   ]
 
-  // Add blog posts dynamically — replace with your actual data source
-  const blogSlugs = [
-    'is-iptv-legal-in-canada',
-    'best-iptv-canada',
-    'how-to-get-iptv-in-canada',
-    'iptv-from-canada',
-    'iptv-canada-complete-guide-internet-television-2026',
-    'install-activate-tivimate-on-android-tv',
-    'iptv-epg-explained-2025-best-iptv-canada-services-tv-guide',
-    'what-is-iptv-beginners-guide-canada',
-    'iptv-vs-cable-difference-which-is-better-canadians',
-    '10-best-iptv-canada-providers-ranked-reviewed',
-    '10-best-iptv-canada-2026',
-    'free-iptv-trial-how-to-test-iptv-service-before-buying',
-    'how-to-watch-iptv-on-multiple-devices-guide',
-  ]
+  // Add blog posts dynamically
+  const blogPosts = getAllBlogPosts();
+  const blogSlugs = blogPosts.map(post => post.slug);
 
   const blogRoutes = blogSlugs.map(slug => ({
     url: `${baseUrl}/blog/${slug}`,
@@ -39,5 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticRoutes, ...blogRoutes]
+  const cityRoutes = cities.map(city => ({
+    url: `${baseUrl}/${city.slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticRoutes, ...blogRoutes, ...cityRoutes]
 }
