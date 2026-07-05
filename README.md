@@ -1,1 +1,1 @@
-# IPTV Canada - Premium Streaming Platform
+# IPTV Canada - iptvsmartproviders.com
