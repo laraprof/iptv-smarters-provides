@@ -128,7 +128,7 @@ export default function AboutPage() {
         </div>
 
         {/* Our Values */}
-        <div className="bg-white rounded-[40px] p-10 md:p-16 border border-slate-100 shadow-2xl shadow-slate-200/50">
+        <div className="bg-white rounded-[40px] p-10 md:p-16 border border-slate-100 shadow-2xl shadow-slate-200/50 mb-12">
           <h2 className="text-3xl font-black text-center text-brand-dark tracking-tight mb-12">
             Why Choose Our Team?
           </h2>
@@ -153,6 +153,28 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-black text-brand-dark mb-3">Local Support</h3>
               <p className="text-slate-500 text-sm leading-relaxed">When you reach out for help, you&apos;re talking to our Canadian support team who understands your needs and resolves issues instantly.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* E-E-A-T Author Bio Section */}
+        <div id="team" className="bg-white rounded-[40px] p-10 md:p-16 border border-slate-100 shadow-2xl shadow-slate-200/50">
+          <h2 className="text-3xl font-black text-center text-brand-dark tracking-tight mb-12">
+            Meet Our Experts
+          </h2>
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0 border-4 border-slate-50 shadow-inner bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Alex - IPTV Technical Specialist" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-black text-brand-dark mb-1" id="alex">Alex</h3>
+              <p className="text-brand-blue font-bold tracking-wide uppercase text-sm mb-4">IPTV Technical Specialist</p>
+              <p className="text-slate-500 leading-relaxed mb-4">
+                Alex leads our technical support and network optimization division. With over 8 years of experience in the streaming industry, Alex specializes in home network configurations, multi-device routing, and troubleshooting complex IPTV setups. 
+              </p>
+              <p className="text-slate-500 leading-relaxed">
+                As the primary author of the IPTV Canada Guides, Alex shares expert insights on how cord-cutters can maximize their streaming quality and avoid common pitfalls with ISPs and hardware constraints.
+              </p>
             </div>
           </div>
         </div>

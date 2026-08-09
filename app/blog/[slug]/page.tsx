@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.date,
       siteName: "IPTV Canada",
-      authors: ["Alex Martin"],
+      authors: [post.author || "IPTV Canada Team"],
       images: [
         {
           url: ogImageUrl,
@@ -78,7 +78,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     url: `https://iptvsmartproviders.com/blog/${slug}`,
     datePublished: post.date,
     dateModified: post.date,
-    authorName: "Alex Martin",
+    authorName: post.author || "IPTV Canada Team",
+    authorUrl: post.authorUrl,
     image: `https://iptvsmartproviders.com/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`
   });
 
