@@ -9,6 +9,26 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
+  openGraph: {
+    title: "About IPTV Canada | 8+ Years of Streaming Excellence",
+    description: "Learn more about IPTV Canada. For over 8 years, our team has been delivering premium 4K IPTV services with 24/7 local support across the nation.",
+    url: `${siteConfig.url}/about`,
+    siteName: "IPTV Canada",
+    locale: "en_CA",
+    type: "website",
+    images: [{
+      url: `${siteConfig.url}/og?title=About%20IPTV%20Canada`,
+      width: 1200,
+      height: 630,
+      alt: "About IPTV Canada — 8+ Years of Streaming Excellence",
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About IPTV Canada | 8+ Years of Streaming Excellence",
+    description: "For over 8 years, our team has been delivering premium 4K IPTV services with 24/7 Canadian support.",
+    images: [`${siteConfig.url}/og?title=About%20IPTV%20Canada`],
+  },
 };
 
 export default function AboutPage() {

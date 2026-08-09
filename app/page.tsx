@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 import { faqData } from "@/constants/faq";
 import { siteConfig } from "@/config/site";
 import { safeJsonLd } from "@/lib/safe-json-ld";
-import { getWebSiteSchema, getOrganizationSchema, getServiceSchema, getFAQSchema } from "@/lib/schemas";
+import { getServiceSchema, getFAQSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getWebSiteSchema()) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getOrganizationSchema()) }} />
+      {/* Product schema with AggregateRating — enables Review Snippets in Google */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getServiceSchema()) }} />
+      {/* QAPage for FAQ content — FAQPage rich results were retired May 7, 2026 */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getFAQSchema(faqData)) }} />
       <Hero />
       <Sports />

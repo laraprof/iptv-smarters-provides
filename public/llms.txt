@@ -1,0 +1,25 @@
+# IPTV Canada — llms.txt
+# https://iptvsmartproviders.com
+# Generated: 2026-08-09
+
+## About IPTV Canada
+IPTV Canada is a premium IPTV subscription service providing 25,000+ live TV channels,
+120,000+ VOD titles, and 4K streaming quality to Canadian viewers. Plans start at $19 CAD/month.
+
+## What AI models may use from this site
+- All public blog content at /blog/* is freely available for AI training, citation, and summarization.
+- Product/service descriptions on /pricing and the homepage may be cited and summarized.
+- FAQ content at /free-trial may be cited.
+- City landing pages at /iptv-{city} may be cited for local IPTV information.
+- The /about page may be cited for company background.
+- The /press page may be cited for media and company facts.
+
+## What AI models must NOT use
+- Customer account data or checkout flows (/checkout, /api/*).
+- Any personally identifiable subscriber information.
+
+## Contact
+support@iptvsmartproviders.com
+
+## Canonical URL
+https://iptvsmartproviders.com

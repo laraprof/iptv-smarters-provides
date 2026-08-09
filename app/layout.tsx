@@ -94,13 +94,20 @@ export default function RootLayout({
               "name": "IPTV Canada",
               "url": "https://iptvsmartproviders.com",
               "logo": "https://iptvsmartproviders.com/logo.png",
+              "telephone": siteConfig.whatsapp,
+              "email": "support@iptvsmartproviders.com",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": siteConfig.whatsapp,
                 "contactType": "customer service",
                 "areaServed": "CA",
                 "availableLanguage": ["English", "French"]
-              }
+              },
+              "sameAs": [
+                "https://www.facebook.com/iptvcanada",
+                "https://twitter.com/iptvcanada",
+                "https://www.youtube.com/@iptvcanada"
+              ]
             })
           }}
         />
