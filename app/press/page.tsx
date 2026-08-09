@@ -120,7 +120,7 @@ export default function PressPage() {
             <div className="border border-slate-200 rounded-3xl p-8">
               <h3 className="font-black text-brand-dark text-lg mb-4">Linking Guidelines</h3>
               <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                When linking to us online, please use our exact brand name "IPTV Canada" and link to our homepage.
+                When linking to us online, please use our exact brand name &quot;IPTV Canada&quot; and link to our homepage.
               </p>
               <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 flex items-center gap-2 text-xs font-mono text-slate-600 break-all">
                 <LinkIcon size={12} className="shrink-0 text-slate-400" />

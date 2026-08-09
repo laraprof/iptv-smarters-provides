@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { HelpCircle, Plus, Minus } from "lucide-react";
+import Link from "next/link";
 import { faqData } from "@/constants/faq";
 
 export function FAQ() {
@@ -108,12 +109,12 @@ export function FAQ() {
         {/* Still have questions? */}
         <div className="mt-16 text-center">
           <p className="text-slate-500 text-sm mb-6">Still have more questions? Don&apos;t hesitate to contact us.</p>
-          <a 
+          <Link 
             href="/contact" 
             className="inline-flex items-center justify-center px-8 py-4 bg-brand-blue text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-brand-dark transition-all duration-300 shadow-lg shadow-brand-blue/20"
           >
             Contact Support
-          </a>
+          </Link>
         </div>
       </div>
     </section>
